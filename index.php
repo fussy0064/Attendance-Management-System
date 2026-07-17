@@ -43,9 +43,6 @@ require __DIR__ . '/includes/header.php';
             </div>
             <button type="submit" class="btn">Login</button>
         </form>
-        <p style="margin-top:16px;font-size:0.85rem;color:#6c7a89;">
-            Default admin: <strong>admin</strong> / <strong>Admin@123</strong> (run <code>php seed.php</code> first)
-        </p>
     </div>
 </div>
 <?php require __DIR__ . '/includes/footer.php'; ?>
