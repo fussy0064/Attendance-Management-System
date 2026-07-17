@@ -9,9 +9,9 @@ require_once __DIR__ . '/repositories/UserRepository.php';
 
 $repo = new UserRepository();
 
-$username = 'admin';
-$password = 'Admin@123';
-$email    = 'admin@example.com';
+$username = 'light';
+$password = 'Light@123';
+$email    = 'lightnesskassian4@gmail.com';
 
 if ($repo->usernameExists($username)) {
     echo "Admin account '$username' already exists. Nothing to do.\n";
