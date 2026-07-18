@@ -94,6 +94,9 @@ th { background: #eef2f5; }
     max-width: 380px;
     margin: 60px auto;
 }
+.login-wrap form { text-align: center; }
+.login-wrap .form-group { text-align: left; }
+.login-wrap .btn { width: 100%; }
 
 .filters { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end; margin-bottom: 16px; }
 .filters .form-group { margin-bottom: 0; min-width: 160px; }

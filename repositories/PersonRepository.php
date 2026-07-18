@@ -103,4 +103,24 @@ class PersonRepository
                 || str_contains(mb_strtolower($person->getIdNumber()), $term);
         }));
     }
+
+    /**
+     * Checks if an ID number is already used by another person.
+     * Because id_number is encrypted at rest, this can't be a SQL
+     * WHERE check, so we decrypt and compare in PHP (same approach
+     * as search()). $excludeId lets an edit ignore its own record.
+     */
+    public function idNumberExists(string $idNumber, ?int $excludeId = null): bool
+    {
+        $idNumber = trim($idNumber);
+        foreach ($this->all() as $person) {
+            if ($excludeId !== null && $person->getId() === $excludeId) {
+                continue;
+            }
+            if (strcasecmp($person->getIdNumber(), $idNumber) === 0) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

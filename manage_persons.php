@@ -35,6 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = 'Please provide a valid email address.';
     } elseif (!preg_match('/^(0|\+255)[67]\d{8}$/', $phone)) {
         $error = 'Please provide a valid Tanzanian phone number (e.g. 0712345678 or +255712345678).';
+    } elseif ($repo->idNumberExists($idNumber, $id !== '' ? (int) $id : null)) {
+        $error = 'That ID number is already used by another record.';
     } else {
         $personId = $id !== '' ? (int) $id : null;
 
