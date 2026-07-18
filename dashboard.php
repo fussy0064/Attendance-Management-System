@@ -23,7 +23,7 @@ $leaveToday   = count(array_filter($todayRecords, fn($r) => $r['status'] === 'Le
 $pageTitle = 'Dashboard';
 require __DIR__ . '/includes/header.php';
 ?>
-<h1>Welcome, <?= htmlspecialchars(Auth::username()) ?> 👋</h1>
+<h1>Welcome, <?= htmlspecialchars(Auth::username()) ?> !</h1>
 <p class="badge">Role: <?= htmlspecialchars(Auth::role()) ?></p>
 
 <div class="card">
