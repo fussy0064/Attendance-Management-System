@@ -1,6 +1,6 @@
 </main>
 <footer class="footer">
-    &copy; <?= date('Y') ?> Attendance Management System &mdash; Prepared By Lightness 2026
+    &copy; <?= date('Y') ?> Attendance Management System &mdash; Prepared By Lightness
 </footer>
 <script src="assets/js/script.js"></script>
 </body>
